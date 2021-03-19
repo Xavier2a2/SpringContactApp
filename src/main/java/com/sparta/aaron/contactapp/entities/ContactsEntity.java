@@ -7,14 +7,6 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "contacts", schema = "security")
-@NamedQueries({
-        @NamedQuery(name = "Contacts.getAllContacts",
-                query = "select c from ContactsEntity c"),
-        @NamedQuery(name = "Contacts.getContactById",
-                query = "SELECT c from ContactsEntity c where c.contactId = :contact_id"),
-        @NamedQuery(name = "Contacts.getContactByName",
-                query = "SELECT c from ContactsEntity c where c.firstName = :name or c.lastName = :name")
-})
 public class ContactsEntity {
     private int contactId;
     private String firstName;
